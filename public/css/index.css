@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+tr {
+    background-color: aliceblue;
+}
+
+
+table tbody td ,
+th {
+
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+

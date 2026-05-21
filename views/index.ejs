@@ -7,18 +7,15 @@
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
+    <a href="http://localhost:8000/new">Add new Student</a>
     <h1>All Students Information</h1>
+
     <table>
         <thead>
             <tr>
                 <th>Student Name</th>
                 <th>Parent Name</th>
-                <th>Contact</th>
-                <th>Address</th>
-                <th>School</th>
-                <th>Class</th>
-                <th>Subjects</th>
-                <th>Fee</th>
+                <th>More details</th>
             </tr>
         </thead>
         <tbody>
@@ -26,12 +23,11 @@
                 <tr>
                     <td><%= student.studentName %></td>
                     <td><%= student.parentName %></td>
-                    <td><%= student.contact %></td>
-                    <td><%= student.address %></td>
-                    <td><%= student.schoolName %></td>
-                    <td><%= student.class %></td>
-                    <td><%= student.subject %></td>
-                    <td><%= student.Fees %></td>
+                    <td>
+                        <a href="/listall/<%= student._id %>">View More</a>
+                        <br>
+                        
+                    </td>
                 </tr>
             <% } %>
         </tbody>

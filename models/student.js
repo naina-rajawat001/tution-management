@@ -1,6 +1,14 @@
-const { default: mongoose } = require("mongoose");
+const { default: mongoose, deleteModel } = require("mongoose");
 
 const schema = mongoose.Schema
+
+function getinqueryDate(){
+    const date = new Date()
+    const monthNamesArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let currentMonth = monthNamesArray[date.getMonth()]
+    return `${date.getDate()} ${currentMonth} ${date.getFullYear()}` 
+
+}
 
 const studentSchema = new schema({
     studentName: {
@@ -35,9 +43,20 @@ const studentSchema = new schema({
     Fees: {
         type: Number,
         required: true,
-        min: 0,
+    },
+    inqueryDate:  {
+        type: String,
+        default: getinqueryDate,    
+    },
+    demoClassDate: {
+        type: String,
+    },
+    joiningDate: {
+        type: String,
     }
+
 })
+
 
   
 const Student = mongoose.model('student', studentSchema)

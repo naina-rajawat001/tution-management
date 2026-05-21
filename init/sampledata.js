@@ -7,7 +7,9 @@ const sampleData = [
         schoolName: 'SD.Sr.Sec.School',
         class: '9th',
         subject: 'maths',
-        Fees: 1500
+        Fees: 1500,
+        joiningDate: '28 May 2026',
+        demoClassDate: '30 May 2026'
     },
     {
         studentName: 'kanchan',
@@ -17,7 +19,9 @@ const sampleData = [
         schoolName: 'St Andrew.Sr.Sec.School',
         class: '8th',
         subject: 'maths',
-        Fees: 1500
+        Fees: 1500,
+        joiningDate: '28 May 2026',
+        demoClassDate: '30 May 2026'
     },
     {
         studentName: 'ansh',
@@ -27,7 +31,9 @@ const sampleData = [
         schoolName: 'nav.jyoti.high.School',
         class: '9th',
         subject: 'maths',
-        Fees: 1500
+        Fees: 1500,
+        joiningDate: '28 May 2026',
+        demoClassDate: '30 May 2026'
     },    
     {
         studentName: 'auraj',
@@ -37,7 +43,9 @@ const sampleData = [
         schoolName: 'SD.Sr.Sec.School',
         class: '9th',
         subject: 'maths',
-        Fees: 1500
+        Fees: 1500,
+        joiningDate: '28 May 2026',
+        demoClassDate: '30 May 2026'
     }
 ]
 

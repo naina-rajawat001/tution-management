@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Name: <%= selectedStudentData.studentName.toUpperCase() %></h1>
+    <span>
+        <h2>schoolName <%= selectedStudentData.schoolName %></h2>
+        <h2>parent Name <%= selectedStudentData.parentName %></h2>
+        <h2>contact <%= selectedStudentData.contact %></h2>
+        <h2>class : <%= selectedStudentData.class %></h2>
+        <h2>address : <%= selectedStudentData.address %></h2>
+        <h2>Fees : <%= selectedStudentData.Fees %></h2>
+        <h2>inquery Date : <%= selectedStudentData.inqueryDate %></h2>
+        <h2>demoClassDate  : <%= selectedStudentData.demoClassDate %></h2>
+        <h2>joiningDate : <%= selectedStudentData.joiningDate %></h2>
+    </span>
+    <a href="/listall/<%= selectedStudentData._id %>/edit">Edit</a>
+    <form method="post" action="/listall/<%= selectedStudentData._id %>?_method=DELETE">
+        <button>Delete</button>
+    </form>
+</body>
+</html>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(182, 157, 204);
+    }
+    a, button {
+        background-color: rgb(243, 228, 201);
+        font-size: 20px;
+        padding: 5px 20px;
+        text-decoration: none;
+        color: black;
+    }
+    
+</style>

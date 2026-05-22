@@ -3,16 +3,16 @@
     padding: 0;
 } 
 .colorname {
-color: #41431B;
-color: #656D3F;
-color: #84934A;
-color: #ECECEC;
+color: #C2A56D;
+color: #2C3947;
+color: #547A95;
+color: #E8EDF2;
 }
 
 /* header navbar */
 .navbar {
     width: 100%;
-    background-color: #41431B !important;
+    background-color: #2C3947 !important;
     padding: 0.8rem 2rem; /* Using rem units keeps layout heights consistent */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Adds a professional subtle drop shadow */
 }
@@ -29,7 +29,7 @@ color: #ECECEC;
 .navbar .form-control {
     background-color: #E8EDF2 !important;
     border: 1px solid #547A95;
-    color: #41431B !important;
+    color: #2C3947 !important;
 }
 
 
@@ -41,7 +41,7 @@ color: #ECECEC;
 
 .navbar .btn:hover {
     background-color: #C2A56D !important;
-    color: #41431B !important; /* Changes text to dark so it's readable on gold */
+    color: #2C3947 !important; /* Changes text to dark so it's readable on gold */
 }
 
 /* footer  */
@@ -49,7 +49,7 @@ color: #ECECEC;
 .footer {
     padding-left : 0 !important;
     padding-right: 0 !important;
-    background-color: #41431B !important;
+    background-color: #2C3947 !important;
     color: #E8EDF2 !important;
 }
 

@@ -33,7 +33,7 @@ app.get("/listall", async (req, res) => {
 })
 
 
-app.get('/new', (req, res) => {
+app.get('/listall/new', (req, res) => {
     res.render('mainfiles/new.ejs')
 })
 

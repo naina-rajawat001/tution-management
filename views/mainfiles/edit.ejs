@@ -2,65 +2,129 @@
 
 
 <h1>Edit Student Details</h1>
-<form method="post" action="/listall/<%= selectedStudentData._id %>?_method=PUT">
-    <label for = 'student-name'>
-        Student Name
-        <input id="student-name" name="studentName" value="<%= selectedStudentData.studentName %>" required/>
-    </label>
-    <br><br>
-    <label for="parent-name">
-        Parent name
-        <input id="parent-name" name="parentName" value="<%= selectedStudentData.parentName %>"required />
-    </label>
-    <br><br>
-    <label for="phone">
-        Contact No.
-        <input type="number" id="phone" name="contact" value="<%= selectedStudentData.contact %>" required />
-    </label>
-    <br><br>
-    <label for="address">
-        Address
-        <input id="address" name="address"  value="<%= selectedStudentData.address %>" required/>
-    </label>
-    <br><br>
-    <label for="school">
-        school
-        <input id="school" name="schoolName" value="<%= selectedStudentData.schoolName %>" required/>
-    </label>
-    <br><br>
-    <label for="class">
-        Class
-        <select id="class" name="class" value="<%= selectedStudentData.class %>" required>
-            <option value="4th">4<sup>th</sup></option>
-            <option value="5th">5<sup>th</sup></option>
-            <option value="6th">6<sup>th</sup></option>
-            <option value="7th">7<sup>th</sup></option>
-            <option value="8th">8<sup>th</sup></option>
-            <option value="9th">9<sup>th</sup></option>
-            <option value="10th">10<sup>th</sup></option>
-        </select>
-    </label>
-    <br><br>
-    <label for="subject">
-        Subjects
-        <input id="subject" name="subject" value="<%= selectedStudentData.subject %>" required/>
+<form method="post" action="/listall/<%= selectedStudentData._id %>?_method=PUT" class="needs-validation" novalidate>
+    <div class="form-row">
+        <div class="mb-3">
+            <label for='student-name' class="form-label mb-1">Student Name</label>
+            <input type="text" class="form-control" id='student-name' name="studentName" placeholder="Enter Student Name" value="<%= selectedStudentData.studentName %>" required />
+            <div class="invalid-feedback">
+                Please provide a valid name.
+            </div>
+        </div>
         
-    </label>
-    <br><br><br>
-    <label for="fees">
-        Fees
-        <input id="fees" name="Fees" type="number" value="<%= selectedStudentData.Fees %>" required/>
-    </label>
-    <br><br>
-    <label for="demodate">
-        Demo Date
-        <input id="demodate" name="demoClassDate" type="date">
-    </label>
-    <br><br>
-    <label for="joindate">
-        Joining Date
-        <input id="joindate" name="joiningDate" type="date" />
-    </label>
-    <br><br>
-    <button>Submit</button>
+        <div class="mb-3">
+            <label class="form-label mb-1" for="parent-name">Parent Name</label>
+            <input type="text" class="form-control" id="parent-name" name="parentName" placeholder="Enter Parent Name" value="<%= selectedStudentData.parentName %>" required />
+            <div class="invalid-feedback">
+                Please provide a valid name.
+            </div>
+        </div>
+    
+        <div class="mb-3">
+            <label class="form-label mb-1" for="phone">Contact No.</label>
+            <input type="number" class="form-control" id="phone" name="contact" placeholder="Enter Contact Number" value="<%= selectedStudentData.contact %>" required />
+            <div class="invalid-feedback">
+                Please provide a valid Contact Number.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label mb-1" for="address">Address</label>
+            <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address" value="<%= selectedStudentData.address %>"  required />
+            <div class="invalid-feedback">
+                Please provide a Address.
+            </div>
+        </div>
+   
+        <div class="mb-3">
+            <label class="form-label mb-1" for="school">school</label>
+            <input type="text" class="form-control"  id="school" name="schoolName" placeholder="Enter school Name" value="<%= selectedStudentData.schoolName %>" required />
+            <div class="invalid-feedback">
+                Please provide a School Name.
+            </div>
+        </div>
+     
+        
+        <div class="mb-3 position-relative">
+            <label class="form-label mb-1" for="class">Class</label>
+            <select class="form-select" id="class" name="class" value="<%= selectedStudentData.class %>" required>
+                <option value="4th">4th</option>
+                <option value="5th">5th</option>
+                <option value="6th">6th</option>
+                <option value="7th">7th</option>
+                <option value="8th">8th</option>
+                <option value="9th">9th</option>
+                <option value="10th">10th</option>
+            </select>
+            <div class="invalid-feedback">
+                Please provide a  valid class.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <!-- Styled to look exactly like your other form labels -->
+            <label class="form-label mb-1">Subject</label>
+            
+            <div class="p-3 border rounded">
+                <div class="form-check mb-2">
+                    <input type="checkbox" class="form-check-input" id="subject1" name="subject" value="all-subject" 
+                    <%= selectedStudentData.subject && selectedStudentData.subject.includes('all-subject') ? 'checked' : '' %> />
+                    <label for="subject1" class="form-check-label">All Subject</label>
+                </div>
+                
+                <div class="form-check mb-2">
+                    <input type="checkbox" class="form-check-input" id="subject2" name="subject" value="maths" 
+                    <%= selectedStudentData.subject && selectedStudentData.subject.includes('maths') ? 'checked' : '' %> />
+                    <label for="subject2" class="form-check-label">Maths</label>
+                </div>
+                
+                <div class="form-check mb-2">
+                    <input type="checkbox" class="form-check-input" id="subject3" name="subject" value="science" 
+                    <%= selectedStudentData.subject && selectedStudentData.subject.includes('science') ? 'checked' : '' %> />
+                    <label for="subject3" class="form-check-label">Science</label>
+                </div>
+                
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="subject4" name="subject" value="english" 
+                    <%= selectedStudentData.subject && selectedStudentData.subject.includes('english') ? 'checked' : '' %> />
+                    <label for="subject4" class="form-check-label">English</label>
+                </div>
+            </div>
+        
+        </div>
+                
+        
+        <div class="mb-3">
+            <label class="form-label mb-1" for="fees">Fees</label>
+            <input type="number" class="form-control"  id="fees" name="Fees"  placeholder="₹ 1500" value="<%= selectedStudentData.Fees %>" required />
+            <div class="invalid-feedback">
+                Please provide a valid Fee.
+            </div>
+        </div>
+        
+        <div class="row mb-3 g-2">
+            <div class="col-md-6">
+                <label class="mb-1" for="demodate">Demo Date</label>
+                <input type="date" class="form-control"  id="demodate" name="demoClassDate"   placeholder="" value="<%= selectedStudentData.demoClassDate %>" />
+                <div class="invalid-feedback">
+                    Please provide a valid date.
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label class="mb-1" for="joindate">Joining Date</label>
+                <input type="date" class="form-control"  id="joindate" name="joiningDate"  placeholder="" value="<%= selectedStudentData.joiningDate %>" />
+                <div class="invalid-feedback">
+                    Please provide a valid date.
+                </div>
+            </div>
+
+        </div>
+
+         
+    </div>
+    
+    <div class="col-12">
+        <button class="btn" type="submit">Submit form</button>
+    </div>
 </form>

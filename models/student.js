@@ -37,7 +37,7 @@ const studentSchema = new schema({
         required: true,
     },
     subject: {
-        type: String, 
+        type: [String], 
         required: true,
     },
     Fees: {

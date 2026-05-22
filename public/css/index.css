@@ -2,15 +2,74 @@
     margin: 0;
     padding: 0;
 } 
-
-
-body {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.colorname {
+color: #41431B;
+color: #656D3F;
+color: #84934A;
+color: #ECECEC;
 }
+
+/* header navbar */
+.navbar {
+    width: 100%;
+    background-color: #41431B !important;
+    padding: 0.8rem 2rem; /* Using rem units keeps layout heights consistent */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Adds a professional subtle drop shadow */
+}
+
+/* Brand styling */
+.navbar .navbar-brand {
+    color: #E8EDF2 !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* Search input field text box styling */
+.navbar .form-control {
+    background-color: #E8EDF2 !important;
+    border: 1px solid #547A95;
+    color: #41431B !important;
+}
+
+
+.navbar .btn {
+    border: 1px solid #C2A56D !important; 
+    color: #C2A56D !important;
+    font-weight: 600;
+}
+
+.navbar .btn:hover {
+    background-color: #C2A56D !important;
+    color: #41431B !important; /* Changes text to dark so it's readable on gold */
+}
+
+/* footer  */
+
+.footer {
+    padding-left : 0 !important;
+    padding-right: 0 !important;
+    background-color: #41431B !important;
+    color: #E8EDF2 !important;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+
+
+/* form */
+
+
+
+
+
+
+
+
+
+
 
 tr {
     background-color: aliceblue;
@@ -26,5 +85,5 @@ th {
 
 
 .main {
-    margin-top: 5%; 
+    margin: 5% 0; 
 }

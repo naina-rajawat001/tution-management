@@ -1,9 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+
 body {
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2%;;
 }
 
 tr {
@@ -18,4 +24,23 @@ th {
     font-size: 20px;
 }
 
+header{
+    padding: 2%;
+    width: 98%;
+    background-color: rgb(56, 95, 93);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(180, 178, 154);
+    font-size: 20px;
+    font-weight: 700;
+}
 
+header a {
+    text-decoration: none;
+    color: rgb(180, 178, 154);
+}
+
+.main {
+    margin-top: 5%; 
+}

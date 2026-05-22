@@ -1,0 +1,29 @@
+<% layout('layouts/boilerplate') %>
+
+
+<h1>All Students Information</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Parent Name</th>
+            <th>More details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(let student of students ) { %>
+            <tr>
+                <td><%= student.studentName %></td>
+                <td><%= student.parentName %></td>
+                <td>
+                    <a href="/listall/<%= student._id %>">View More</a>
+                    <br>
+                    
+                </td>
+            </tr>
+        <% } %>
+    </tbody>
+</table>
+
+
